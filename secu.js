@@ -10,7 +10,7 @@ function bouclePre (secuPremiers) {
         secuPremiers += 1000;
         cle = (97 - (secuPremiers % 97));
       	if (cle ===39){
-        	console.log(secuPremiers + " " + cle);
+        	document.write(secuPremiers + " " + cle +  "<BR>");
       		}
       	else{};
       }
@@ -20,10 +20,11 @@ function boucleDer (secuDerniers) {
         secuDerniers += 1;
         cle = (97 - (secuDerniers % 97));
       	if (cle ===39){
-        	console.log(secuDerniers + " " + cle);
+        	document.write(secuDerniers + " " + cle +  "<BR>");
       		}
       	else{};
       }
 };
 bouclePre(secuPremiers); // Imprime tous les numéros de sécu où le doute était sur le département
 boucleDer(secuDerniers); // Imprime tous les numéros de sécu où le doute était sur le rang de naissance
+
