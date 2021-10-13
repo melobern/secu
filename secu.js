@@ -2,7 +2,7 @@ var numSecu = 293116938704939;
 var numSansCle = numSecu.toString().slice(0,13);
 var laCle = (97 - (numSansCle % 97)); // Formule de calcul de la clé
 document.write(numSansCle.toString() + laCle.toString() + "<BR>");
-laCle < 10 ? laCle = "0" + laCle.toString():0;
+laCle < 10 ? laCle = "0" + laCle.toString():0; // Si clé inférieure à 10, imprimer 0 + la clé
 document.write("La clé de " + numSansCle + "  est  " + laCle +  "<BR><BR>");
 
 var ntS = numSecu.toString();
