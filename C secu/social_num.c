@@ -6,7 +6,7 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 23:16:14 by mbernard          #+#    #+#             */
-/*   Updated: 2023/09/10 10:55:43 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/09/12 21:44:58 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,8 @@ void	calcul_nums(char *str)
 
 void	one_arg_num(char *av)
 {
-	char	*dest;
+	char		*dest;
+	long long	key;
 
 	if (ft_strlen(av) < 12)
 		ft_putstr("Oups ! This number is way too short !");
@@ -87,7 +88,13 @@ void	one_arg_num(char *av)
 		free(dest);
 	}
 	else if (ft_strlen(av) == 13)
+	{
 		print_just_key(av);
+		key = (av[11] - '0') * 10 + (av[12] - '0');
+		dup_year(av, key);
+		dup_month(av, key);
+		dup_dep(av, key);
+	}
 	else if (ft_strlen(av) == 14)
 		ft_putstr("Oups ! Not enough or too many numbers !");
 	else if (ft_strlen(av) == 15)

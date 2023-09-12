@@ -6,7 +6,7 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 22:51:21 by mbernard          #+#    #+#             */
-/*   Updated: 2023/09/10 10:50:26 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/09/12 21:46:04 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,9 @@ char		*convert(char **av);
 char		**ft_split(char *str, char *charset);
 char		*ft_strdup(char *src);
 char		*dup_mun_birth(char *str);
+void		dup_year(char *str, long long key);
+void		dup_month(char *str, long long key);
+void		dup_dep(char *str, long long key);
 long long	ft_atoi(char *str);
 long long	calcul_the_key(char *str);
 int			ft_strlen(char *str);
