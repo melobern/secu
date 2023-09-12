@@ -6,7 +6,7 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 23:16:14 by mbernard          #+#    #+#             */
-/*   Updated: 2023/09/12 21:44:58 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/09/12 22:15:31 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,17 +76,12 @@ void	calcul_nums(char *str)
 
 void	one_arg_num(char *av)
 {
-	char		*dest;
 	long long	key;
 
 	if (ft_strlen(av) < 12)
 		ft_putstr("Oups ! This number is way too short !");
-	if (ft_strlen(av) == 12)
-	{
-		dest = dup_mun_birth(av);
-		one_arg_num(dest);
-		free(dest);
-	}
+	else if (ft_strlen(av) == 12)
+		dup_mun_birth(av);
 	else if (ft_strlen(av) == 13)
 	{
 		print_just_key(av);
