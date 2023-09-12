@@ -6,13 +6,13 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 21:21:18 by mbernard          #+#    #+#             */
-/*   Updated: 2023/09/12 21:50:52 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/09/12 22:14:58 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-char	*dup_mun_birth(char *str)
+void	dup_mun_birth(char *str)
 {
 	char	copy[15];
 
@@ -22,7 +22,7 @@ char	*dup_mun_birth(char *str)
 	copy[12] = copy[9];
 	copy[13] = str[10];
 	copy[14] = str[11];
-	return (ft_strdup(copy));
+	one_arg_num(copy);
 }
 
 void	dup_year(char *str, long long key)
